@@ -1,6 +1,8 @@
 # A Logistic Matrix Factorization Method for Letterboxd Recommendation
 
-The code in this repository is based on Sam Learner's Letterboxd recommender, and uses much of the same database setup and webscraping, without the Redis frontend. To run the code yourself locally, setup the MongoDB instance by:
+The code in this repository is based on Sam Learner's Letterboxd recommender, and uses much of the same database setup and webscraping, without the Redis frontend. However, it includes a `LogFactorizer` class, to implement a logistic matrix factorizer for implicit user data. For more information on this project, check out https://medium.com/@agangal00/logistic-matrix-factorization-for-movie-recommendation-5e2c19415e88.
+
+To run the code yourself locally, setup the MongoDB instance by:
 1. Starting up a local MongoDB server on the default port (27017)
 2. Add a `db_config` file to the `logistic_factorizer` directory, with a config variable such as: `config = { 'MONGO_DB': 'letterboxd-implicit', 'CONNECTION_URL': 'mongodb://localhost:27017/'}`, and optionally a TMDB API key as `tmdb_key = "EXAMPLEKEY1234"`.
    
